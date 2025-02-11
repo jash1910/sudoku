@@ -82,10 +82,19 @@ button:hover {
 
 /* Responsive Styles */
 @media (max-width: 600px) {
+    .sudoku-container {
+        max-width: 200px; /* Set max width for mobile */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+
     .cell {
-        width: 30px; /* Smaller cell size */
-        height: 30px; /* Smaller cell size */
-        font-size: 18px; /* Smaller font size */
+        width: 30px; /* Adjusted cell size */
+        height: 30px; /* Adjusted cell size */
+        font-size: 18px; /* Adjusted font size */
     }
 
     button {
@@ -99,10 +108,14 @@ button:hover {
 }
 
 @media (max-width: 400px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
+    }
+
     .cell {
-        width: 25px; /* Even smaller cell size */
-        height: 25px; /* Even smaller cell size */
-        font-size: 16px; /* Even smaller font size */
+        width: 25px; /* Further adjusted cell size */
+        height: 25px; /* Further adjusted cell size */
+        font-size: 16px; /* Further adjusted font size */
     }
 
     button {
