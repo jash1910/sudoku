@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff8e1; /* Light yellow background */
+    font-family: Arial, sans-serif;
+}
+
+.sudoku-container {
+    background: #fff; /* White background for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff9800; /* Darker yellow for the heading */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ffcc00; /* Yellow border */
+    border-radius: 5px;
+    background-color: #fff; /* White background for cells */
+    transition: background-color 0.3s;
+}
+
+.cell:focus {
+    outline: none;
+    border-color: #ff9800; /* Darker yellow on focus */
+}
+
+.cell[readonly] {
+    background-color: #ffe0b2; /* Light yellow for read-only cells */
+    color: #795548; /* Dark brown for text */
+}
+
+.cell.invalid {
+    background-color: #ffcccb; /* Light red for invalid inputs */
+}
+
+.cell.valid {
+    background-color: #c8e6c9; /* Light green for valid inputs */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800; /* Button background color */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
